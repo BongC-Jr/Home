@@ -1,2 +1,2 @@
-# Home
-Bong GitHub web page
+# Bong
+Structural Engineering Auxiliary Software developer
