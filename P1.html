@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BongCabebe</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-light-green.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+   <div class="w3-contents">
+     <div class="w3-bar w3-theme-d3">
+        <button class="w3-bar-item w3-button tablink w3-theme-l3" onclick="openTab(event,'About')">About</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'Consultancy')">Consultancy</button>
+        <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'Contact')">Contact</button>
+      </div>
+      
+      <div id="About" class="w3-container w3-border myTab">
+        <p>Bong Cabebe</p>
+        <p>Developer of custom structural software</p>
+      </div>
+    
+      <div id="Consultancy" class="w3-container w3-border myTab" style="display:none">
+        <ul>
+          <li>Structural design</li>
+          <li>Base Isolation Design</li>
+          <li>Bar Cutting List Software</li>
+          <li>Productivity commands</li>
+        </ul> 
+      </div>
+    
+      <div id="Contact" class="w3-container w3-border myTab" style="display:none">
+        <p>Email met at bong.cabebe01@gmail.com</p>
+      </div>
+   </div>
+</body>
+<script>
+  function openTab(evt, tabName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("myTab");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-theme-l3", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " w3-theme-l3";
+  }
+</script>
+</html>
